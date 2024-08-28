@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;  
+            padding: 0;
+            background-image: url('./assets/images/fundoMuseus.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .top-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .top-buttons .btn {
+            margin: 5px;
+            width: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative; /* Necessário para o posicionamento absoluto do footer */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #80d4ff;
+            margin: 0;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-section {
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #2C3E50;
+        }
+
+        .btnD {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btnD:hover {
+            background-color: #2C3E50;
+        }
+
+        .info-section {
+            flex: 2;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            line-height: 1.6;
+        }
+
+        .info-section a {
+            color: #80d4ff;
+            text-decoration: none;
+        }
+
+        .info-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: absolute; /* Faz o footer ficar fixo na parte inferior do container */
+            bottom: 20px;
+            left: 20px; /* Ajusta a posição à esquerda */
+        }
+
+        .footer .btn {
+            width: auto; /* Ajusta a largura do botão para o tamanho do conteúdo */
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.info-section h2 {
+    font-family: 'Playfair Display', serif; /* Fonte clássica e elegante */
+    font-size: 2em; /* Tamanho moderado para elegância */
+    color: #4a4a4a; /* Cor cinza escuro para sofisticação */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco quase sólido para um toque refinado */
+    padding: 15px 25px; /* Ajusta o espaço para destacar sem exagero */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 4px solid #a0a0a0; /* Borda cinza para um visual sofisticado */
+    width: 70%;
+    margin: 0 auto;
+    position: relative; /* Para os elementos decorativos */
+}
+
+.info-section h2::before,
+.info-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: #a0a0a0; /* Elementos decorativos em cinza */
+}
+
+.info-section h2::before {
+    left: -40px;
+}
+
+.info-section h2::after {
+    right: -40px;
+}
+
+
+.info-section h2::before {
+    left: -50px;
+}
+
+.info-section h2::after {
+    right: -50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400&display=swap');
+
+/* Estilos para o título (mantendo como Playfair Display para contraste) */
+.info-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #4a4a4a;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 4px solid #a0a0a0;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.info-section h2::before,
+.info-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: #a0a0a0;
+}
+
+.info-section h2::before {
+    left: -40px;
+}
+
+.info-section h2::after {
+    right: -40px;
+}
+
+/* Estilo para os parágrafos usando Merriweather */
+.info-section p {
+    font-family: 'Merriweather', serif; /* Fonte clássica e elegante */
+    line-height: 1.6;
+    color: #e0e0e0; /* Cor do texto para contraste suave com o fundo escuro */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="top-buttons">
+        <a class="btn" href="#louvre">Museu do Louvre</a>
+        <a class="btn" href="#metropolian">Metropolian</a>
+        <a class="btn" href="#national-gallery">National Gallery</a>
+        <a class="btn" href="#britanico">Britânico</a>
+        <a class="btn" href="#rijksmuseum">Rijksmuseum</a>
+    </div>
+
+    <div id="louvre" class="container">
+        <header class="header">
+        </header>
+        <div class="main-content">
+            <div class="image-section">
+                <img src="https://i.pinimg.com/originals/08/db/2c/08db2c988b465e7a68088e6bdf6325b3.jpg" alt="Museu do Louvre">
+                <h3>Museu do Louvre</h3>
+                <a class="btn" href="https://www.getyourguide.com/pt-br/-t3393/?cmp=ga&cq_src=google_ads&cq_cmp=21550936202&cq_con=168427086649&cq_term=museu%20do%20louvre%20ingresso&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=21550936202&adgroup_id=168427086649&target_id=kwd-40833222163&loc_physical_ms=9102332&match_type=e&ad_id=391768406556&keyword=museu%20do%20louvre%20ingresso&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu9ZgdSNPLjTrp5OdVZkqbhJqDFbn-xLF5nlliWo6hTBegBFyl8gnrBoCpxoQAvD_BwE">Comprar ingresso</a>
+                <a class="btn" href="https://360stories.com/paris/place/louvre-museum">Visualizar o museu virtualmente</a>
+                <br><br><br><br>
+            </div>
+            <div class="info-section">
+                <h2>Informações sobre o Museu do Louvre</h2>
+                <p>O Museu do Louvre, localizado em Paris, França, é o maior museu de arte do mundo e um importante monumento histórico. Situado na margem direita do rio Sena, no 1º arrondissement, exibe cerca de 38 mil objetos, desde a pré-história até o século XXI, em uma área de 72.735 metros quadrados. Em 2019, foi o museu mais visitado do mundo, com 9,6 milhões de visitantes.
+
+                    O Louvre foi originalmente construído como um castelo nos séculos XII e XIII durante o reinado de Filipe II. Convertido em residência real por Francisco I em 1546, o edifício passou por várias ampliações e tornou-se um local para exibir a coleção real. Em 1692, a Académie des Inscriptions et Belles-Lettres e a Académie Royale de Peinture et de Sculpture ocuparam o edifício e realizaram exposições. Durante a Revolução Francesa, o Louvre foi transformado em museu, inaugurado em 10 de agosto de 1793 com 537 pinturas, principalmente de origem real e confiscada da Igreja Católica. 
+                    
+                    Após problemas estruturais e um período de fechamento, o museu foi renomeado Museu Napoleão durante o governo de Napoleão, mas após sua abdicação, muitas obras foram devolvidas. A coleção foi ampliada significativamente sob os reinados subsequentes e pelo Segundo Império Francês. Atualmente, o acervo é dividido em oito departamentos curatoriais: antiguidades egípcias, do Oriente Próximo, gregas, etruscas e romanas; arte islâmica; esculturas; artes decorativas; pinturas; e impressões e desenhos.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <a class="btn" href="#top">Voltar</a>
+        </footer>
+    </div>
+    <br><br>
+    <div id="metropolian" class="container">
+        <header class="header">
+        </header>
+        <div class="main-content">
+            <div class="image-section">
+                <img src="https://media.architecturaldigest.com/photos/60a4034a95b85cfe2c9816a7/4:3/w_1920,h_1440,c_limit/ITM002-The-Met-Facade-during-deinstall-of-Wangechi-Mutu_s-sculptures-scaled.jpg" alt="Museu Metropolian">
+                <h3>Museu Metropolian</h3>
+                <a class="btn" href="https://www.getyourguide.com/pt-br/metropolitan-museum-of-art-l2609/?cq_src=google_ads&cq_cmp=21268814336&cq_con=&cq_term=&cq_med=&cq_plac=&cq_net=x&cq_pos=&cq_plt=gp&campaign_id=21268814336&adgroup_id=&target_id=&loc_physical_ms=9102332&match_type=&ad_id=&keyword=&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu-g8jmSHn5t7ehg6ObAGZszpIHDaBG-d5O1gHGqVV-epVVWfK7rfIxoC7qwQAvD_BwE">Comprar ingresso</a>
+                <a class="btn">Visualizar o museu virtualmente</a>
+                <br><br><br><br>
+            </div>
+            <div class="info-section">
+                <h2>Informações sobre o Museu Metropolian</h2>
+                <p>     O Metropolitan Museum of Art (em português: Museu Metropolitano de Arte), conhecido informalmente como The Met, é um museu de arte localizado na cidade de Nova Iorque, Estados Unidos, sendo um dos mais visitados museus do planeta.Fundado em 13 de abril de 1870, foi aberto ao público em 20 de fevereiro de 1872.O museu foi designado, em 24 de junho de 1986, um edifício do Registro Nacional de Lugares Históricos bem como, na mesma data, um Marco Histórico Nacional.O acervo do Metropolitan Museum of Art é curado por dezessete departamentos distintos, sendo cada um deles encabeçado por uma equipe especializada de curadores e estudiosos, assim como seis deles dedicados à conservação e um dedicado exclusivamente à pesquisa científica.
+                 O acervo do Met inclui pinturas europeias dos séculos XII–XX, arte antiga (grega, romana, egípcia, assírio-babilônica), arte oriental e obras de artistas norte-americanos. O museu também possui importantes coleções de instrumentos musicais, armas, indumentária e uma variedade de arte africana, asiática, oceânica, bizantina e islâmica. O Met é curado por 17 departamentos especializados, com ênfase em conservação e pesquisa científica, e é designado como um Marco Histórico Nacional e um edifício do Registro Nacional de Lugares Históricos desde 1986.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <a class="btn" href="#top">Voltar</a>
+        </footer>
+    </div>
+    <br><br>
+    <div id="-galnationallery" class="container">
+        <header class="header">
+        </header>
+        <div class="main-content">
+            <div class="image-section">
+                <img src="https://i0.wp.com/travelawaits.com/wp-content/uploads/2022/06/The-National-Gallery-at-night.jpg?resize=1000%2C750&ssl=1" alt="Museu National Gallery">
+                <h3>National Gallery</h3>
+                <a class="btn" href="https://www.getyourguide.com/pt-br/national-gallery-londres-l3188/?cq_src=google_ads&cq_cmp=21268814336&cq_con=&cq_term=&cq_med=&cq_plac=&cq_net=x&cq_pos=&cq_plt=gp&campaign_id=21268814336&adgroup_id=&target_id=&loc_physical_ms=9102332&match_type=&ad_id=&keyword=&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu3FGYbFwQvhNHX-qOfqZnavTH6QihL_3Dz7yIpAmPoX6MRX7dxb6UhoC0OkQAvD_BwE&visitor-id=FXN0005IDOJJNHMKUX7EX77RJUO3AY6J&locale_autoredirect_optout=true">Comprar ingresso</a>
+                <a class="btn">Visualizar o museu virtualmente</a>
+                <br><br><br><br>
+            </div>
+            <div class="info-section">
+                <h2>Informações sobre o Museu National Gallery</h2>
+                <p>     O museu foi inaugurado em fevereiro de 1872, quando Robert Lee Jenkins doou sua coleção privada. Desde então foi incrementando sua coleção e já supera os dois milhões de obras. Os objetos mais importantes do Metropolitan são seus tesouros das culturas clássicas e as pinturas de artistas tão importantes como Monet, Cézanne ou Rembrandt. Entre as exibições menos habituais se encontra a zona egípcia, onde se expõe o Templo de Dendur magnificamente reconstruído. Este templo foi um presente do <a href="#">Egito</a> pela ajuda na salvação de <a href="#">Abu Simbel</a>.Começando na década de 1920, o financiador e arte colecionador Andrew W. Mellon começou a reunir uma coleção de pinturas e esculturas antigas master com a intenção de dotar o país com uma galeria arte nacional. Após a sua morte em 1937, no Congresso uma resolução comum aceite da Mellon recolha e construção fundos (fornecidos através da AW Mellon Educacional e Charitable Trust), e aprovou a construção de um museu sobre a National Mall.Começando na década de 1920, o financiador e arte colecionador Andrew W. Mellon começou a reunir uma coleção de pinturas e esculturas antigas master com a intenção de dotar o país com uma galeria arte nacional. Após a sua morte em 1937, no Congresso uma resolução comum aceite da Mellon recolha e construção fundos (fornecidos através da AW Mellon Educacional e Charitable Trust), e aprovou a construção de um museu sobre a National Mall.Desenhado pelo arquitecto John Russell (que iria para a concepção sobre o Jefferson Memorial</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <a class="btn" href="#top">Voltar</a>
+        </footer>
+    </div>
+    <br><br>
+    <div id="britanico" class="container">
+        <header class="header">
+        </header>
+        <div class="main-content">
+            <div class="image-section">
+                <img src="https://dedmundoafora.com.br/wp-content/uploads/2018/12/museu-brit25C325A2nico-londres-dia82B25281922529.jpg" alt="Museu Britânico">
+                <h3>Museu Britânico</h3>
+                <a class="btn" href="https://www.getyourguide.com/pt-br/-l3190/?cmp=ga&cq_src=google_ads&cq_cmp=6951137469&cq_con=85530161408&cq_term=ingresso%20museu%20britanico&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=6951137469&adgroup_id=85530161408&target_id=kwd-2298826335834&loc_physical_ms=9102332&match_type=e&ad_id=395288611364&keyword=ingresso%20museu%20britanico&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu4E1ppxyvlIFCzneNXCG7PsBFHsMXVfQN_1BUAMKBDqxxL5xauDmghoCfz8QAvD_BwE">Comprar ingresso</a>
+                <a class="btn">Visualizar o museu virtualmente</a>
+                <br><br><br><br>
+            </div>
+            <div class="info-section">
+                <h2>Informações sobre o Museu Britânico</h2>
+                <p>     O Museu Britânico, fundado em 15 de janeiro de 1759 e aberto ao público em 20 de fevereiro de 1759, é um marco no desenvolvimento museológico e na história cultural. Foi o primeiro grande museu público, gratuito e secular do mundo, embora não o primeiro museu moderno (o Museu Ashmolean de Oxford, de 1679, já tinha esse propósito). 
+
+                    Inicialmente, o museu combinou três grandes coleções: a biblioteca Cottoniana, manuscritos de Robert Harley e a vasta coleção de Sir Hans Sloane, que incluía antiguidades, moedas e arte. A variedade e o volume dessas coleções foram características marcantes na fase inicial do museu, que, na época, ainda se assemelhava mais a um gabinete de curiosidades.
+                    
+                    O Museu Britânico incorporou um modelo de museu que combinava exposições educativas com uma biblioteca para pesquisa. Essa abordagem foi consolidada por Anthony Panizzi e se tornou um padrão para museus modernos. O museu também reflete o surgimento do conceito de museu nacional, similar ao Museu do Louvre. A rivalidade entre nações europeias e a busca por identidade nacional influenciaram o desenvolvimento e a expansão do museu, que adquiriu muitos artefatos significativos, como a Pedra de Roseta, após a derrota de Napoleão.
+                    
+                    Com o tempo, a acumulação de objetos tornou a operação do museu inviável, levando à criação de novas instituições: a National Gallery (1824), o Museu de História Natural (1880) e a transferência do setor de Etnografia (1870). Hoje, o Museu Britânico abriga mais de sete milhões de objetos, representando a história da cultura humana. O museu, que oferece entrada gratuita para a maioria das exibições e programas educacionais, inaugurou o Great Court em 2000, a maior praça coberta da Europa. Ele também possui uma coleção de arte contemporânea africana, incluindo obras de Fathi Hassan.</p>
+                </div>
+        </div>
+        <footer class="footer">
+            <a class="btn" href="#top">Voltar</a>
+        </footer>
+    </div>
+    <br><br>
+    <div id="rijksmuseum" class="container">
+        <header class="header">
+        </header>
+        <div class="main-content">
+            <div class="image-section">
+                <img src="https://img3.oastatic.com/img2/81760754/600x300c/variant.jpg" alt="">
+                <h3>Museu Rijksmuseum</h3>
+                <a class="btn" href="https://www.getyourguide.com/pt-br/-l2696/?cmp=ga&cq_src=google_ads&cq_cmp=6766431255&cq_con=83135460153&cq_term=ingresso%20museu%20rijksmuseum&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=6766431255&adgroup_id=83135460153&target_id=kwd-414683219933&loc_physical_ms=9102332&match_type=e&ad_id=652701030451&keyword=ingresso%20museu%20rijksmuseum&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu4wNxzX6W4p9aGKILX1zFxHwx5mzQSpXOd0HOaRB2xeZBABp-LQhXhoCCJsQAvD_BwE">Comprar ingresso</a>
+                <a class="btn">Visualizar o museu virtualmente</a>
+                <br><br><br><br>
+            </div>
+            <div class="info-section">
+                <h2>Informações sobre o Museu Rijksmuseum</h2>
+                <p>     O Rijksmuseum (“Museu do Estado”, em holandês) é o museu nacional dos Países Baixos, localizada em Amsterdã na Praça dos Museus. O Rijksmuseum é dedicado à artes e história. Ele tem uma larga coleção de pinturas da idade de ouro neerlandesa e uma substancial coleção de arte asiática.O museu foi fundado em 1800 na cidade da Haia para exibir a coleção do primeiro-ministro. Foi inspirado no exemplo francês. Pelos neerlandeses ficou conhecida como Galeria de Arte. Em 1808 o museu mudou-se para Amesterdã pelas ordens do rei Louis Napoleón, irmão de Napoleão Bonaparte. As pinturas daquela cidade, como A Ronda Nocturna de Rembrandt, tornaram-se parte da coleção.De 2003 a 2013, o local passa por um programa de reformas assinado pelo escritório espanhol de arquitetura comandado por Antonio Cruz e Antonio Ortiz. As obras consistem em intervenções focadas em espacialidade, restauro e iluminação, que recuperam a coerência do projeto arquitetônico original (alterado ao longo dos anos) e, ao mesmo tempo, permitem que o Rijksmuseum, concebido no Século XIX, se torne um museu do Século XXI.Na reabertura, além das novas instalações, o Rijksmuseum apresenta também novos contornos curatoriais: 800 anos da história e da arte dos Países Baixos passam a ser apresentados num contexto internacional e numa linha cronológica distribuída por quatro pisos e 80 salas. Ao todo, estão em exposição cerca de 8 mil itens, como pinturas, gravuras, desenhos, fotografias, prataria, porcelana, móveis, joias, armas, roupas e outros objetos do passado.[2] A superfície total do museu chega a 30 mil metros quadrados.</p>
+                <footer class="footer">
+                    <a class="btn" href="#top">Voltar</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+                <br> <br> 
+                <a class="btnD" href="sobre.html">Sobre a equipe</a>
+</body>
+</html>
+

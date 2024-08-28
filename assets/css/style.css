@@ -1,0 +1,87 @@
+body {
+  font-family: sans-serif;
+  transition: all 6s;
+  font-size: larger;
+  background-image: linear-gradient(20deg, darkblue, gray);
+}
+body.dark {
+  background-color: black;
+  color: white;
+}
+body.dark .containeroito {
+  max-width: 1000px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(45deg, darkblue, black);
+}
+
+.containerzero {
+  max-width: 1140px;
+  border: 1px solid red;
+}
+
+.imagem-fluida {
+  width: 100%;
+  height: auto;
+}
+
+.blocos_artistas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blocos_artistas .artista {
+  flex: 1;
+  border: 15px dashed black;
+  min-height: 200px;
+  max-width: 300px;
+}
+.blocos_artistas .a1 {
+  background-color: antiquewhite;
+  background-image: url("https://th.bing.com/th/id/R.ebadbeec8a400921a77e86bcf444a31c?rik=fnG2LtzUodoTHg&pid=ImgRaw&r=0");
+  background-size: cover;
+  background-position: center;
+}
+.blocos_artistas .a2 {
+  background-color: aquamarine;
+  background-image: url("https://a57.foxnews.com/a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/11/640/320/1862/1048/louvre-istock.jpg?ve=1&tl=1?ve=1&tl=1");
+  background-size: cover;
+  background-position: center;
+}
+.blocos_artistas .a3 {
+  background-color: cadetblue;
+  background-image: url("https://aws-tiqets-cdn.imgix.net/images/content/5bd29eba58c3471e892ef940f0eaf592.jpg?auto=format&fit=crop&ixlib=python-3.2.1&q=70&s=a2f6a12208b3506099c21f822fcd5a20");
+  background-size: cover;
+  background-position: center;
+}
+.blocos_artistas .a4 {
+  background-color: cyan;
+  background-image: url("https://thecitylane.com/wp-content/uploads/2016/09/IMG_0137.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.blocos_artistas .a5 {
+  background-color: azure;
+  background-image: url("https://th.bing.com/th/id/R.687f1d9cedabe8ee6dfac855a88888ec?rik=EpSkoim4yNOqZQ&pid=ImgRaw&r=0");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none; /* sem bolinhas*/
+  padding: 20px;
+  margin: 0;
+}
+.menu li {
+  color: black;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */

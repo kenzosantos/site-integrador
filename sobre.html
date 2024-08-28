@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sobre</title>
+        
+        <style>
+            body.dark {
+                background-color: #000000; /* Fundo cor de márm
+                re claro */
+                color: #333; /* Texto em um cinza escuro para contraste */
+                font-family: 'Georgia', serif; /* Fonte serifada para um visual mais clássico */
+                margin: 0;
+                padding: 40px;
+                line-height: 1.6; /* Facilita a leitura */
+            }
+
+            h1, h2, h3, h4 {
+                color: #8a6d3b; /* Um tom dourado para os títulos */
+                text-transform: uppercase;
+                border-bottom: 3px solid #8a6d3b; /* Bordas douradas para dar um toque de elegância */
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                font-weight: bold;
+            }
+         
+            .btn {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #2C3E50;
+        }
+
+            li {
+                list-style-type: none;
+                margin: 15px 0;
+                padding: 15px;
+                background-color: #fff8e1; /* Fundo bege suave */
+                border: 1px solid #d2b48c; /* Borda com um tom de ouro pálido */
+                border-radius: 5px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+                transition: transform 0.2s;
+            }
+
+            li:hover {
+                background-color: #f7f1e3; /* Cor de fundo ao passar o mouse */
+                transform: scale(1.02); /* Efeito de zoom suave */
+                cursor: pointer;
+            }
+
+            /* Estilo adicional para dar um toque de papel antigo */
+            body.dark::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('assets/images/texture.png'); /* Imagem de textura de papel antigo */
+                opacity: 0.1;
+                pointer-events: none; /* Permite interagir com o conteúdo */
+            }
+        </style>
+        <script src="assets/js/script.js"></script>
+    </head>
+    <body class="dark"> 
+        <H2>Sobre nós:</H2>
+        <h2>Isadora da Maia Torres</h2>
+        <ul>
+            <li>Gerente do nosso P.I., é quem puxa nosso saco para trabalhar e quem nos direciona no que se deve ou não fazer. Auxilia no Design do projeto e nas melhorias.</li>
+        </ul>
+
+        <h2>Kenzo Ruthes dos Santos</h2>
+        <ul>
+            <li>Kenzo é, sei lá, é parte da programação, sei lá, assistente da nossa gerente e chefe da parte da programação.</li>
+        </ul>
+        
+        <h2>João Vitor Resin Nogueira</h2>
+        <ul>
+            <li>Ajudante da Isadora na parte do design e também ajuda na programação.</li>
+        </ul>
+
+        <h2>Otto Dias</h2>
+        <ul>
+            <li>Ajudante de Kenzo na parte de programação e jogador de Minecraft nas horas vagas e não vagas.</li>
+        </ul>
+    <a class="btn" href="museus.html">Volte para o inicio</a>
+    </body>
+</html>
