@@ -10,32 +10,38 @@
     <script src=assets/js/script.js></script>
     <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/022/057/704/original/museum-logo-template-with-minimalist-and-modern-concept-free-vector.jpg">
     <style>
-        body {
-            font-family: cursive;
-            background-image: linear-gradient(100deg, darkblue, black);
+        body {background-image: url('images/1.jpg'); /* Substitua pelo caminho da sua imagem */
+              background-size: cover; /* A imagem cobrirá todo o fundo */
+              background-repeat: no-repeat; /* Impede que a imagem se repita */
+              background-position: center; /* Centraliza a imagem */
+              height: 100vh; /* Faz com que o fundo cubra toda a altura da tela */
+              margin: 0; /* Remove margens padrão */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
         }
         div {
             background-color: rgba(206, 201, 201, 0.5);
             position: absolute;
+            align-items: center;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 75px;
             border-radius: 50px;
             color: white;
-    
         }
         h1 {
             font-size: 50px;
             font-family: cursive;
         }
-
         input {
             padding: 10px;
             outline: none;
             font-size: 15px;
             font-family: cursive;
-            border-radius: 300px;
+            border-radius: 5px;
             width: 100%;
         }
         button {
@@ -44,8 +50,8 @@
             font-size: 15px;
             border-radius: 50px;
             border: none;
-            color: rgb(0, 0, 0);
-            width: 110%;
+            color: black;
+            width: 100%;
             padding: 11px;
         }
         button:hover {
@@ -53,7 +59,6 @@
             color: white;
         }
         header {
-            height: 120vh;
             background-size: cover; /* Faz a imagem cobrir todo o fundo */
             background-repeat: no-repeat; /* Impede que a imagem se repita */
             position: absolute;
@@ -61,7 +66,6 @@
             left: 50%;
             transform: translate(-50%,-50%);
             padding: 80px;
-            
         }
         a {
             color: red;
@@ -70,18 +74,19 @@
 </head>
 
 <body class="dark" background="images/1.jpg">
+    <img src="" alt="">
     <header>
-        <img src="./assets/images/image.png" alt="">
+        <img src="https://th.bing.com/th/id/R.ac9e679812389a4b4abb15c8cf4705ee?rik=7Gp6HUNIzI7AxA&riu=http%3a%2f%2fmedia.architecturaldigest.com%2fphotos%2f5900cc370638dd3b70018b33%2fmaster%2fpass%2fSecrets+of+Louvre+1.jpg&ehk=hAKFCm8l7I4rrpUDUohq%2bqtJ%2f%2b4bovQlQM2lH3C4fCk%3d&risl=&pid=ImgRaw&r=0" alt="">
     </header>
         </script>
         <div class="tela-login"> 
             <h1>Login</h1>
-            <input type="text" placeholder="G-mail">
+            <input type="text" placeholder="Nome">
             <br><br>
             <input type="password" placeholder="Senha">
             <br><br>
             <button class="animated-button" onclick="window.location.href = 'museus.html'">Enviar</button>
-            <a href="cadastro.html">não tem uma conta? Cadastre-se</a>
+            <a href="cadastro.html">Já tem uma conta? Cadastre-se</a>
         </div>
 
 </body>
