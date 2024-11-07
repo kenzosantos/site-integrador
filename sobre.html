@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sobre</title>
-        
-        <style>
-            body.dark {
-                background-color: #000000; /* Fundo cor de márm
-                re claro */
-                color: #333; /* Texto em um cinza escuro para contraste */
-                font-family: 'Georgia', serif; /* Fonte serifada para um visual mais clássico */
-                margin: 0;
-                padding: 40px;
-                line-height: 1.6; /* Facilita a leitura */
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpeg">
+    <style>
+        /* Estilos Gerais */
+        body.dark {
+            background-image: url('/mnt/data/image.png'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-            h1, h2, h3, h4 {
-                color: #8a6d3b; /* Um tom dourado para os títulos */
-                text-transform: uppercase;
-                border-bottom: 3px solid #8a6d3b; /* Bordas douradas para dar um toque de elegância */
-                padding-bottom: 10px;
-                margin-bottom: 30px;
-                font-weight: bold;
-            }
-         
-            .btn {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            border: 1px solid white;
-            border-radius: 5px;
-            cursor: pointer;
+        /* Overlay dourado para criar um efeito elegante sobre a imagem */
+        body.dark::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 44, 44, 0.7); /* Leve sobreposição escura para melhorar a legibilidade */
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Estilo de Títulos */
+        h2 {
+            color: #ffd700; /* Dourado para título principal */
+            text-transform: uppercase;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border-bottom: 4px solid #ffd700;
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h3 {
+            color: #f4d03f; /* Dourado suave para subtítulos */
+            text-transform: uppercase;
+            font-size: 1.5em;
+            margin: 30px 0 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Estilo do Container de Integrantes */
+        .member-container {
+            display: flex;
+            align-items: center;
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 30px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo da Imagem dos Integrantes */
+        .member-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 2px solid #ffd700;
+        }
+
+        /* Estilo da Descrição */
+        .member-description {
+            color: #ffffff;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Estilo dos Botões */
+        .btn {
+            display: inline-block;
+            width: auto;
+            margin: 20px 10px;
+            padding: 10px 20px;
+            background-color: #f4d03f;
+            color: #1a1a1a;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
             text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1em;
         }
 
         .btn:hover {
-            background-color: #2C3E50;
+            background-color: #ffd700;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
+    </style>
+    <script src="assets/js/script.js"></script>
+</head>
+<body class="dark">
+    <h2>Sobre Nós</h2>
 
-            li {
-                list-style-type: none;
-                margin: 15px 0;
-                padding: 15px;
-                background-color: #fff8e1; /* Fundo bege suave */
-                border: 1px solid #d2b48c; /* Borda com um tom de ouro pálido */
-                border-radius: 5px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
-                transition: transform 0.2s;
-            }
+    <div class="member-container">
+        <img src="assets/images/isadora.jpg" alt="Foto de Isadora">
+        <div class="member-description">
+            <h3>Isadora da Maia Torres</h3>
+            <p>Gerente do projeto e de design, nascida no dia 31 de outubro de 2008, Joinville – SC Brasil. Tem como hobbys cuidar de gatos, desenhar e ler livros de suspense e assassinato. Apresenta como função principal no P.I. (projeto integrador) comandar e gerenciar o trabalho dos integrantes da equipe.</p>
+        </div>
+    </div>
 
-            li:hover {
-                background-color: #f7f1e3; /* Cor de fundo ao passar o mouse */
-                transform: scale(1.02); /* Efeito de zoom suave */
-                cursor: pointer;
-            }
+    <div class="member-container">
+        <img src="assets/images/kenzo.jpg" alt="Foto de Kenzo">
+        <div class="member-description">
+            <h3>Kenzo Ruthes dos Santos</h3>
+            <p>Chefe da parte de programação, nascido no dia 18 de agosto de 2013, Guaratuba-PR Brasil. Seus hobbys são jogar, detetive, refletir e jogar também. Sua função é fazer a maior parte dos códigos e botar na linha seus ajudantes João e Otto.</p>
+        </div>
+    </div>
 
-            /* Estilo adicional para dar um toque de papel antigo */
-            body.dark::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-image: url('assets/images/texture.png'); /* Imagem de textura de papel antigo */
-                opacity: 0.1;
-                pointer-events: none; /* Permite interagir com o conteúdo */
-            }
-        </style>
-        <script src="assets/js/script.js"></script>
-    </head>
-    <body class="dark"> 
-        <H2>Sobre nós:</H2>
-        <h2>Isadora da Maia Torres.</h2>
-        <ul>
-            <li>Isadora da Maia Torres é Gerente do nosso P.I., é quem puxa nossa orelha para trabalhar e quem nos direciona no que se deve ou não fazer. Auxilia no Design do projeto e nas melhorias do mesmo para desenvolvermos e melhorarmos ainda mais o nosso site.</li>
-        </ul>
+    <div class="member-container">
+        <img src="assets/images/" alt="Foto de João">
+        <div class="member-description">
+            <h3>João Vitor Resin Nogueira</h3>
+            <p>Auxiliar do Kenzo e Isadora, nasceu no dia 26 de julho de 2008, Joinville-SC Brasil. Possui como hobbys praticar esportes e games e ler mangá. Carrega como tarefa ajudar em todas as funções do projeto.</p>
+        </div>
+    </div>
 
-        <h2>Kenzo Ruthes dos Santos.</h2>
-        <ul>
-            <li>Kenzo Ruthes dos Santos é parte da programação assistente da nossa gerente. chefe da parte da programação do nosso P.I. auxilia na perte de código de front-end e back-end para nos ajudar e buscar melhorias para o site.</li>
-        </ul>
-        
-        <h2>João Vitor Resin Nogueira.</h2>
-        <ul>
-            <li>Coadjuvante da nossa Gerente na parte do design e também é suporte na parte de programação ajudando também na correção de erros dos códigos.</li>
-        </ul>
+    <div class="member-container">
+        <img src="assets/images/otto.jpg" alt="Foto de Otto">
+        <div class="member-description">
+            <h3>Otto Dias</h3>
+            <p>Faz o que pedem, nascido em 18 de agosto de 2008, Joinville-SC Brasil. Seus hobbys são dormir, cozinhar e pensar sobre a vida. Porta o objetivo de fazer o que precisa ser feito.</p>
+        </div>
+    </div>
 
-        <h2>Otto Dias</h2>
-        <ul>
-            <li>Ajudante de Kenzo na parte de programação, assistente do acessor da gerente do nosso projeto trabalha na áere de programação e de disigner do site.</li>
-        </ul>
-    <a class="btn" href="museus.html">Volte para o inicio</a>
-    </body>
+    <a class="btn" href="museus.html">Volte para o Início</a>
+    <a class="btn" href="chatbot.html">IA</a>
+</body>
 </html>

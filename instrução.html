@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo sobre museus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        video {
+            border: 4px solid #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            video {
+                width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .btnD {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+
+    <h1>Sobre Museus e Realidade Virtual</h1>
+
+    <video width="600" controls>
+        <source src="./assets/videos/audio-museu (1).mp4" type="video/mp4">
+        Seu navegador não suporta a exibição de vídeos.
+    </video>
+
+    <a class="btnD" href="museus.html">volte</a>
+
+</body>
+</html>

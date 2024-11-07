@@ -6,6 +6,7 @@
     <title>Museum 360°</title>
     <link rel="stylesheet" href="assets/css/style.scss" />
     <script src="assets/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpeg" />
 
     <style>
       body {
@@ -20,28 +21,39 @@
         background-attachment: fixed;
         overflow: hidden;
       }
-
+      p {
+        text-align: justify;
+        font-size: x-large;
+      }
       #my-scrollbar {
         height: 100vh; /* Full height of the viewport */
         overflow: auto; /* Enable scrolling */
+      }
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background-color: #007bff;
+        z-index: 99;
       }
 
       .top-buttons {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        margin: 20px;
+        margin: 10px;
       }
 
       .top-buttons .btn {
         margin: 5px;
         width: auto;
       }
-
+      
       .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
+        width: 96%;
+        height: auto;
+        margin: 0;
         padding: 20px;
         background-color: #444;
         border-radius: 10px;
@@ -75,19 +87,23 @@
         width: 100%;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        height: 400px;
       }
 
       .btn {
         display: block;
-        width: 80%;
+        width: 400px;
+        height: 30px;
         margin: 10px auto;
         padding: 10px;
         background-color: #000;
         color: #fff;
-        border: none;
+        border: 5px solid transparent; /* Ajuste para visibilidade do border */
         border-radius: 5px;
         cursor: pointer;
         text-decoration: none;
+        text-align: center; /* Centraliza o texto dentro do botão */
+        line-height: 30px; /* Centraliza verticalmente */
       }
 
       .btn:hover {
@@ -95,21 +111,38 @@
       }
 
       .btnD {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        padding: 10px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        text-align: center;
-      }
+    display: block;
+    width: 200px;
+    margin: 200px auto;
+    padding: 10px;
+    background-color: #4b3f30; /* Um tom de marrom antigo, remetendo a móveis antigos */
+    color: #f0e6d2; /* Tom bege claro, que lembra pergaminho */
+    border: 2px solid #d2b48c; /* Borda com tom de ouro envelhecido */
+    border-radius: 10px; /* Borda levemente arredondada para um toque suave */
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Georgia', serif; /* Fonte com serifa para um toque clássico */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil para um efeito de relevo */
+    transition: background-color 0.3s, transform 0.2s; /* Efeito suave ao passar o mouse */
+}
 
       .btnD:hover {
-        background-color: #2c3e50;
+        background-color: #6d5e4f; /* Cor mais clara ao passar o mouse */
+        transform: translateY(-4px); /* Efeito de leve elevação */
+      }
+
+      .btnT {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
       }
 
       .info-section {
@@ -145,6 +178,15 @@
       }
 
       .footer .btn {
+        width: auto; /* Ajusta a largura do botão para o tamanho do conteúdo */
+        border-radius: 5px;
+        margin-top: 10px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+      }
+      .footer .btnD {
         width: auto; /* Ajusta a largura do botão para o tamanho do conteúdo */
         border-radius: 5px;
         margin-top: 10px;
@@ -249,9 +291,36 @@
         line-height: 1.6;
         color: #e0e0e0; /* Cor do texto para contraste suave com o fundo escuro */
       }
+      .menu-lateral {
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    /* Estilização dos links do menu */
+    .menu-lateral a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    .menu-lateral a:hover {
+      background-color: #555;
+    }
     </style>
   </head>
   <body>
+    <div id="progressBar"></div>
     <a id="top"></a>
 
     <div id="my-scrollbar">
@@ -547,8 +616,13 @@
       </div>
       <br />
       <br />
-      <a class="btnD" href="sobre.html">Sobre a equipe</a>
-      <br> <br>
+      <div id="my-scrollbar">
+        <div class="top-buttons">
+      <a class="btnD container" href="cadastro.html">Cadastro</a>
+      <a class="btnD container" href="telalogin.html">Login</a>
+      <a class="btnD container" href="sobre.html">Sobre a equipe</a>
+      <a class="btnD container" href="instrução.html">Instruções</a>
+      <br /><br />
     </div>
 
     <!-- Smooth Scrollbar JS -->
@@ -589,15 +663,31 @@
       });
 
       document.addEventListener("DOMContentLoaded", function () {
-        var scrollbar = Scrollbar.init(document.getElementById("my-scrollbar"), {
+        var scrollbar = Scrollbar.init(
+          document.getElementById("my-scrollbar"),
+          {
             damping: 0.07,
-        });
+          }
+        );
 
-        document.querySelector('a[href="#top"]').addEventListener('click', function (e) {
+        document
+          .querySelector('a[href="#top"]')
+          .addEventListener("click", function (e) {
             e.preventDefault();
             scrollbar.scrollTo(0, 0, 800); // Rola até o topo em 800ms
-        });
-    });
+          });
+      });
+    </script>
+    <script>
+      window.onscroll = function () {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      };
     </script>
   </body>
 </html>
