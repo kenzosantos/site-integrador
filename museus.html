@@ -291,38 +291,54 @@
         line-height: 1.6;
         color: #e0e0e0; /* Cor do texto para contraste suave com o fundo escuro */
       }
-      .menu-lateral {
-      width: 200px;
-      height: 100vh;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 20px;
-    }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease, background-color 0.3s;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
 
-    /* Estilização dos links do menu */
-    .menu-lateral a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px;
-      width: 100%;
-      text-align: center;
-      display: block;
-    }
+      .sidebar.active {
+        transform: translateX(0);
+      }
 
-    .menu-lateral a:hover {
-      background-color: #555;
-    }
+      .sidebar h2 {
+        margin-top: 0;
+      }
+
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 0;
+        border-bottom: 1px solid #444;
+        transition: color 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #aaa;
+      }
+      .menu-toggle {
+        border-radius: 997px;
+        background-color: #000;
+        color: #fff;
+        padding: 13px;
+      }
     </style>
   </head>
   <body>
     <div id="progressBar"></div>
     <a id="top"></a>
-
     <div id="my-scrollbar">
       <div class="top-buttons">
         <a class="btn" href="#louvre">Museu do Louvre</a>
@@ -330,6 +346,16 @@
         <a class="btn" href="#national-gallery">National Gallery</a>
         <a class="btn" href="#britanico">Britânico</a>
         <a class="btn" href="#rijksmuseum">Rijksmuseum</a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <!-- Menu lateral -->
+      <div class="sidebar" id="sidebar">
+        <br> <br> <br> <br>
+          <h2>Menu</h2>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contatos</a>
       </div>
 
       <div id="louvre" class="container">
@@ -344,13 +370,11 @@
             <a
               class="btn"
               href="https://www.getyourguide.com/pt-br/-t3393/?cmp=ga&cq_src=google_ads&cq_cmp=21550936202&cq_con=168427086649&cq_term=museu%20do%20louvre%20ingresso&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=21550936202&adgroup_id=168427086649&target_id=kwd-40833222163&loc_physical_ms=9102332&match_type=e&ad_id=391768406556&keyword=museu%20do%20louvre%20ingresso&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu9ZgdSNPLjTrp5OdVZkqbhJqDFbn-xLF5nlliWo6hTBegBFyl8gnrBoCpxoQAvD_BwE"
-              >Comprar ingresso</a
-            >
+              >Comprar ingresso</a>
             <a
               class="btn"
               href="https://360stories.com/paris/place/louvre-museum"
-              >Visualizar o museu virtualmente</a
-            >
+              >Visualizar o museu virtualmente</a>
             <br /><br /><br /><br />
           </div>
           <div class="info-section">
