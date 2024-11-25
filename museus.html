@@ -51,7 +51,8 @@
       }
       
       .container {
-        width: 96%;
+        width: 80%;
+        left:   10%;
         height: auto;
         margin: 0;
         padding: 20px;
@@ -154,9 +155,17 @@
       }
 
       .info-section h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
+    font-size: 2em; /* Tamanho destacado, mas não exagerado */
+    margin-bottom: 15px; /* Espaçamento abaixo ajustado */
+    color: #bfa05a; /* Tom de dourado envelhecido, elegante e discreto */
+    text-transform: uppercase; /* Texto em maiúsculas para reforçar a formalidade */
+    letter-spacing: 1px; /* Leve espaçamento entre as letras para sofisticação */
+    text-align: center; /* Centraliza o título */
+    border-bottom: 2px solid #bfa05a; /* Linha inferior fina e discreta */
+    padding-bottom: 8px; /* Pequeno espaço entre o texto e a linha */
+    font-family: 'Georgia', serif; /* Fonte clássica e limpa */
+}
+
 
       .info-section p {
         line-height: 1.6;
@@ -197,106 +206,12 @@
       }
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 
-      .info-section h2 {
-        font-family: "Playfair Display", serif; /* Fonte clássica e elegante */
-        font-size: 2em; /* Tamanho moderado para elegância */
-        color: #4a4a4a; /* Cor cinza escuro para sofisticação */
-        text-align: center;
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.9
-        ); /* Fundo branco quase sólido para um toque refinado */
-        padding: 15px 25px; /* Ajusta o espaço para destacar sem exagero */
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        border: 4px solid #a0a0a0; /* Borda cinza para um visual sofisticado */
-        width: 70%;
-        margin: 0 auto;
-        position: relative; /* Para os elementos decorativos */
-      }
-
-      .info-section h2::before,
-      .info-section h2::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 30px;
-        height: 3px;
-        background-color: #a0a0a0; /* Elementos decorativos em cinza */
-      }
-
-      .info-section h2::before {
-        left: -40px;
-      }
-
-      .info-section h2::after {
-        right: -40px;
-      }
-
-      .info-section h2::before {
-        left: -50px;
-      }
-
-      .info-section h2::after {
-        right: -50px;
-      }
-
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400&display=swap");
-
-      /* Estilos para o título (mantendo como Playfair Display para contraste) */
-      .info-section h2 {
-        font-family: "Playfair Display", serif;
-        font-size: 2em;
-        color: #4a4a4a;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 15px 25px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        border: 4px solid #a0a0a0;
-        width: 70%;
-        margin: 0 auto;
-        position: relative;
-      }
-
-      .info-section h2::before,
-      .info-section h2::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 30px;
-        height: 3px;
-        background-color: #a0a0a0;
-      }
-
-      .info-section h2::before {
-        left: -40px;
-      }
-
-      .info-section h2::after {
-        right: -40px;
-      }
-
-      /* Estilo para os parágrafos usando Merriweather */
-      .info-section p {
-        font-family: "Merriweather", serif; /* Fonte clássica e elegante */
-        line-height: 1.6;
-        color: #e0e0e0; /* Cor do texto para contraste suave com o fundo escuro */
-      }
       .sidebar {
         position: fixed;
         top: 0;
         left: 0;
-        width: 250px;
-        height: 100%;
+        width: 300px;
+        height: 300px;
         background-color: rgba(0, 0, 0, 0.85);
         color: white;
         padding: 20px;
@@ -309,31 +224,69 @@
         z-index: 1000;
       }
 
-      .sidebar.active {
-        transform: translateX(0);
-      }
+        .sidebar.active {
+            left: 19%; /* Move o menu para dentro da tela */
+        }
 
-      .sidebar h2 {
-        margin-top: 0;
-      }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px 20px;
+            border-bottom: 1px solid #444;
+        }
 
-      .sidebar a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 0;
-        border-bottom: 1px solid #444;
-        transition: color 0.3s;
-      }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
 
-      .sidebar a:hover {
-        color: #aaa;
-      }
-      .menu-toggle {
-        border-radius: 997px;
-        background-color: #000;
-        color: #fff;
-        padding: 13px;
-      }
+        /* Botão de abertura */
+        .open-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Botão de fechamento */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #111;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.active {
+            margin-left: 250px; /* Empurra o conteúdo para dar espaço ao menu */
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          }
+
     </style>
   </head>
   <body>
@@ -347,16 +300,19 @@
         <a class="btn" href="#britanico">Britânico</a>
         <a class="btn" href="#rijksmuseum">Rijksmuseum</a>
       </div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-      <!-- Menu lateral -->
-      <div class="sidebar" id="sidebar">
-        <br> <br> <br> <br>
-          <h2>Menu</h2>
-        <a href="#">Home</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contatos</a>
-      </div>
+  <!-- Botão para abrir o menu -->
+  <button class="open-btn" id="open-btn">☰</button>
+
+  <!-- Menu Lateral -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times</button>
+    <br> 
+      <a href="telalogin.html">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="sobre.html">Sobre a equipe</a>
+      <a href="instrução.html">Vísobre</a>
+  </div>
 
       <div id="louvre" class="container">
         <header class="header"></header>
@@ -640,18 +596,28 @@
       </div>
       <br />
       <br />
-      <div id="my-scrollbar">
-        <div class="top-buttons">
-      <a class="btnD container" href="cadastro.html">Cadastro</a>
-      <a class="btnD container" href="telalogin.html">Login</a>
-      <a class="btnD container" href="sobre.html">Sobre a equipe</a>
-      <a class="btnD container" href="instrução.html">Instruções</a>
-      <br /><br />
-    </div>
-
     <!-- Smooth Scrollbar JS -->
     <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.6.3/dist/smooth-scrollbar.js"></script>
     <script>
+              // Pega os elementos
+              const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+
+        // Quando clicar no botão de abrir
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            mainContent.classList.add('active');
+        });
+
+        // Quando clicar no botão de fechar
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            mainContent.classList.remove('active');
+        });
+
+
       document.addEventListener("DOMContentLoaded", function () {
         Scrollbar.init(document.body, {
           damping: 0.07,
