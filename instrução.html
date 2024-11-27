@@ -6,29 +6,73 @@
     <title>Vídeo sobre museus</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Georgia", serif;
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            background: linear-gradient(to bottom, #f8f5e6, #e8e3d4); /* Fundo estilo pergaminho */
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: white;
             text-align: center;
         }
 
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #8b6f47; /* Dourado fosco */
+        }
+
         video {
-            border: 4px solid #2c3e50;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 6px solid #8b6f47; /* Borda dourada fosca */
+            border-radius: 5px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+            max-width: 90%;
+        }
+
+        .btnD {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #f5f5f0; /* Tom de pergaminho */
+            color: #333; /* Cor de texto elegante */
+            border: 2px solid #8b6f47; /* Tom dourado fosco */
+            border-radius: 5px; /* Toque levemente arredondado */
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            font-family: "Georgia", serif; /* Fonte com estilo clássico */
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .btnD:hover {
+            background-color: #e0dacd; /* Tom um pouco mais escuro para feedback */
+            color: #5a4a33; /* Dourado envelhecido */
+            transform: scale(1.02); /* Pequeno aumento para destaque */
+        }
+
+        .btnD:focus {
+            outline: 2px solid #8b6f47;
+            outline-offset: 3px;
+        }
+
+        .btnD:active {
+            background-color: #c9bba6; /* Tom mais profundo para feedback */
+            color: #3e3023; /* Tom ainda mais intenso */
+            transform: scale(0.98);
+        }
+
+        .btnD::after {
+            content: "→";
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #8b6f47; /* Dourado fosco */
         }
 
         /* Responsividade */
@@ -39,22 +83,13 @@
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+
+            .btnD {
+                width: 70%;
             }
         }
-        .btnD {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        padding: 10px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        text-align: center;
-      }
     </style>
 </head>
 <body>
@@ -66,7 +101,7 @@
         Seu navegador não suporta a exibição de vídeos.
     </video>
 
-    <a class="btnD" href="museus.html">volte</a>
+    <a class="btnD" href="museus.html">Volte</a>
 
 </body>
 </html>
